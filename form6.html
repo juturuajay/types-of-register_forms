@@ -1,0 +1,63 @@
+<html>
+<script type="text/javascript">
+   function validate(){
+   
+   var username=document.getElementById("uname");
+   var password=document.getElementById("pass");
+   
+      if(username.value.trim()=="" || password.value.trim()=="")
+       {
+	       alert("no blank values allowed");
+		   return false;
+	   }
+	   else
+	   {
+	       true;
+	   }
+   }
+
+</script>
+	<body>
+      <hr color="pink" size="2"/>	  
+	  <table align="center" cellpadding="15">
+	      <tr>
+		      <td><a href="form1.html">Form one</a></td>
+		      <td><a href="form2.html">Form two</a></td>		  
+		      <td><a href="form3.html">Form three</a></td>		  
+		      <td><a href="form4.html">Form four</a></td>		  
+		      <td><a href="form5.html">Form five</a></td>		  
+		      <td><a href="form6.html">Form six</a></td>		  
+		  </tr>	  
+	  </table>
+	  <hr color="pink" size="3"/>
+	  <!---
+	            form tag=it represents a collection of form associated elements, some of which
+				          can represents editable values that can be submitted to a server for processing
+	            action=it define the backend file name that is going to capture the data from html
+				method= the type of security - GET , POST
+				GET= It is unsecure and default, it display the data in browser url
+				POST=it is fully secure and never display data in browser url,
+        				it pass the data to backend in hidden and encoded format.
+				name=it is use to define a variable in html, to capture input given by user.
+				submit= it will redirect to action page.
+	--->
+       <form  onsubmit="return validate()" action="message.html" method="POST">
+	      <table align="center" cellpadding="10">
+		     <tr>
+			     <th>User id</th>
+			     <td><input id="uname" type="text" name="username"/></td>
+			 </tr>
+		     <tr>
+			     <th>Your password</th>
+			     <td><input id="pass" type="password" name="pass"/></td>
+			 </tr>
+			 <tr>
+			    <th colspan="2">
+				  <button type="submit">submit</button>
+				  <button type="reset">reset</button>
+				  </th>
+			 </tr>
+		  </table>
+	   </form>
+	 </body>
+</html>
